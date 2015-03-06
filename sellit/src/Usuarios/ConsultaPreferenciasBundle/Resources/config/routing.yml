@@ -1,0 +1,9 @@
+usuarios_consulta_preferencias_sugeridos:
+    path:     /usuarios/preferencias/sugeridos
+    defaults: { _controller: UsuariosConsultaPreferenciasBundle:Default:sugeridos }
+    methods:  [POST]
+    
+usuarios_consulta_preferencias_sugeridos_geolocalizacion:
+    path:     /usuarios/preferencias/sugeridosgeo
+    defaults: { _controller: UsuariosConsultaPreferenciasBundle:Default:sugeridosGeolocalizacion }
+    methods:  [POST]

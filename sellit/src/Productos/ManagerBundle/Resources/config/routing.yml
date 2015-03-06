@@ -1,0 +1,37 @@
+productos_ver:
+    path:     /productos/ver/{idproducto}
+    defaults: { _controller: ProductosManagerBundle:Default:ver , (idproducto:null)}
+    methods: [GET]
+    
+productos_usuario_ver:
+    path:     /productos/listarusuario/{idusuario}
+    defaults: { _controller: ProductosManagerBundle:Default:listarusuario, (idusuario:null) }
+    methods: [GET]
+    
+productos_usuario_listar:
+    path:     /productos/listarvendedor/{idvendedor}/{limit}/{offset}/{include_images}/{orderASC}
+    defaults: { _controller: ProductosManagerBundle:Default:listarvendedor, limit: 10, offset: 0, include_images: true, idvendedor: false, orderASC: true }    
+    methods: [GET]
+    
+productos_categorias_listar:
+    path:     /productos/listarcategorias
+    defaults: { _controller: ProductosManagerBundle:Default:listarcategorias }    
+    
+productos_contar:
+    path:     /productos/contar/{idVendedor}
+    defaults: { _controller: ProductosManagerBundle:Default:contarProductos}
+    
+productos_eliminar:
+    path:     /productos/eliminar
+    defaults: { _controller: ProductosManagerBundle:Default:eliminar}
+    methods: [POST]
+    
+productos_activar:
+    path:     /productos/activar
+    defaults: { _controller: ProductosManagerBundle:Default:activar }
+    methods: [POST]
+    
+productos_desactivar:
+    path:     /productos/desactivar
+    defaults: { _controller: ProductosManagerBundle:Default:desactivar }
+    methods: [POST]
